@@ -1,0 +1,272 @@
+.managed-services-page {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.search-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+.search-hero-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.search-banner-image.reduced-height {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.search-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(43, 53, 86, 0.8) 0%, rgba(249, 115, 22, 0.6) 100%);
+  z-index: 2;
+}
+
+.search-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #ffffff;
+  max-width: 1000px;
+  padding: 0 32px;
+}
+
+.search-hero-content h1 {
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.search-hero-content .tagline {
+  font-size: clamp(0.95rem, 3vw, 1.25rem);
+  line-height: 1.6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0;
+}
+
+/* Cards Section */
+.managed-services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+}
+
+.managed-service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  width: 320px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.managed-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.managed-service-card h3 {
+  font-size: 1.4rem;
+  color: #004aad;
+  margin-bottom: 0.5rem;
+}
+
+.managed-service-card p {
+  font-size: 1rem;
+  color: #444444;
+  line-height: 1.6;
+}
+
+/* Approach Section */
+.our-approach-section {
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.our-approach-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.our-approach-container h2 {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 2rem;
+}
+
+.approach-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.approach-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.approach-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.approach-card h4 {
+  font-size: 1.3rem;
+  color: #004aad;
+  margin-bottom: 0.5rem;
+}
+
+.approach-card p {
+  font-size: 1rem;
+  color: #444444;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.search-cta {
+  padding: 2rem 1rem;
+  background-color: #004aad;
+  color: #ffffff;
+  text-align: center;
+}
+
+.search-cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  min-width: 160px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #004aad;
+}
+
+.btn-primary:hover {
+  background-color: #e6e6e6;
+}
+
+.btn-outline {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-hero {
+    min-height: unset;
+    height: auto;
+  }
+
+  .search-banner-image.reduced-height {
+    height: auto;
+    max-height: 300px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .search-hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .search-hero-content .tagline {
+    font-size: 0.95rem;
+  }
+
+  .search-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .managed-service-card,
+  .approach-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-banner-image.reduced-height {
+    max-height: 220px;
+  }
+
+  .search-hero-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    min-width: 100%;
+  }
+}

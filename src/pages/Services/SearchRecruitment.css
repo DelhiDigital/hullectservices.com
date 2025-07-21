@@ -1,0 +1,256 @@
+/* ============================
+   Page Root
+============================ */
+.search-recruitment-page {
+  padding-top: 0px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #d2e1f5;
+}
+
+/* ============================
+   Hero Section
+============================ */
+.search-hero {
+  position: relative;
+  background: linear-gradient(135deg, #002654 0%, #0056a8 100%);
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  overflow: hidden;
+}
+
+.search-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("/background.svg") center/cover no-repeat;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.search-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.search-hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 40px;
+}
+
+/* ============================
+   Hero Metrics
+============================ */
+.hero-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.metric-number {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* ============================
+   Section Header
+============================ */
+.search-recruitment-section-header {
+  text-align: center;
+  margin: 80px 0 40px;
+}
+
+.search-recruitment-section-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #002654;
+  margin-bottom: 10px;
+}
+
+.search-recruitment-section-header p {
+  font-size: 1rem;
+  color: #555555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============================
+   Grids (Process / Specs / Benefits)
+============================ */
+.process-grid,
+.specializations-grid,
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 40px auto 80px;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .process-grid,
+  .specializations-grid,
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .process-grid,
+  .specializations-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================
+   Card Styling
+============================ */
+.process-card,
+.specialization-card,
+.benefit-card {
+  background: #ffffff;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.process-card:hover,
+.specialization-card:hover,
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.process-card h3,
+.specialization-card h3,
+.benefit-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #002654;
+  margin-bottom: 10px;
+}
+
+.process-card p,
+.specialization-card p,
+.benefit-card p {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+.spec-icon,
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* ============================
+   Process Activities
+============================ */
+.process-activities {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  text-align: left;
+}
+
+.process-activities li {
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+.process-activities li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0078d4;
+}
+
+/* ============================
+   Process Phase Tag
+============================ */
+.process-phase {
+  display: inline-block;
+  background: #002654;
+  color: white;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ============================
+   CTA Section
+============================ */
+.search-cta {
+  background: linear-gradient(135deg, #002654 0%, #0056a8 100%);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.search-cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.search-cta-content p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+/* ============================
+   Responsive
+============================ */
+@media (max-width: 768px) {
+  .search-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-metrics {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .search-cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .search-cta-content p {
+    font-size: 0.95rem;
+  }
+
+  .search-hero,
+  .search-cta {
+    padding: 60px 20px;
+  }
+}

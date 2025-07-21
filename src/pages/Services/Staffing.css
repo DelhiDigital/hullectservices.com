@@ -1,0 +1,215 @@
+/* ----------------------------
+   4. Staffing Services Page - Isolated CSS
+----------------------------- */
+
+.staffing-page {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+.staffing-hero {
+  background: linear-gradient(135deg, #0078d4, #00b4d8);
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.staffing-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.staffing-hero-content h1 {
+  margin-top: 80px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.staffing-hero-content p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  opacity: 0.95;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons a {
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons a.primary {
+  background: #fff;
+  color: #0078d4;
+}
+
+.hero-buttons a.primary:hover {
+  background: #f2f2f2;
+}
+
+.hero-buttons a.outline {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+
+.hero-buttons a.outline:hover {
+  background: #fff;
+  color: #0078d4;
+}
+
+.staffing-services-section {
+  padding: 100px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.staffing-services-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #003366;
+}
+
+.staffing-services-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.staffing-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.staffing-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+  border: 2px solid #e0e0e0;
+}
+
+.staffing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.staffing-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.staffing-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.staffing-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.staffing-cta {
+  background: linear-gradient(135deg, #03a9f5, #247da9);
+  color: white;
+  padding: 90px 20px;
+  text-align: center;
+  /* margin-top: 80px; */
+}
+
+.staffing-cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.staffing-cta-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.staffing-cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+  opacity: 0.95;
+}
+
+.staffing-cta-content a.cta-btn {
+  background: white;
+  color: #1a73e8;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.staffing-cta-content a.cta-btn:hover {
+  background: #f0f0f0;
+}
+
+@media (max-width: 1200px) {
+  .staffing-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .staffing-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .staffing-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .staffing-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .staffing-card {
+    padding: 30px 20px;
+  }
+
+  .staffing-cta-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .hero-buttons a,
+  .staffing-cta-content a.cta-btn {
+    width: 90%;
+    text-align: center;
+    padding: 14px 0;
+    font-size: 1rem;
+    border-radius: 30px;
+  }
+}

@@ -1,0 +1,233 @@
+/* ----------------------------
+   4. Apprenticeship Page CSS (Isolated)
+----------------------------- */
+
+.apprenticeship-page {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+.apprenticeship-page .apprenticeship-banner-wrapper {
+  margin-top: 60px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  max-height: 550px;
+}
+
+.apprenticeship-page .apprenticeship-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.apprenticeship-page .apprenticeship-hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.apprenticeship-page .apprenticeship-hero-overlay h1 {
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.apprenticeship-page .apprenticeship-hero-overlay .tagline {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 700;
+  opacity: 0.95;
+  padding: 0 1rem;
+}
+
+.apprenticeship-page .apprenticeship-intro {
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+}
+
+.apprenticeship-page .apprenticeship-intro .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.apprenticeship-page .apprenticeship-intro p {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.apprenticeship-page .apprenticeship-section {
+  padding: 3rem 1rem;
+  background: #f1f5f9;
+  text-align: center;
+}
+
+.apprenticeship-page .apprenticeship-section .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.apprenticeship-page .apprenticeship-section p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.apprenticeship-page .apprenticeship-cta {
+  padding: 3rem 1rem;
+  background-color: #004aad;
+  color: #fff;
+  text-align: center;
+}
+
+.apprenticeship-page .apprenticeship-cta h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.apprenticeship-page .apprenticeship-cta p {
+  font-size: 1.125rem;
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+}
+
+.apprenticeship-page .cta-actions {
+  margin-top: 1.5rem;
+}
+
+.apprenticeship-page .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.apprenticeship-page .btn-primary {
+  background-color: #fff;
+  color: #004aad;
+}
+
+.apprenticeship-page .btn-primary:hover {
+  background-color: #e6e6e6;
+}
+
+.apprenticeship-page .btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.apprenticeship-page .btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.apprenticeship-page .apprenticeship-highlights {
+  padding: 3rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.apprenticeship-page .apprenticeship-highlights h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #004aad;
+}
+
+.apprenticeship-page .highlight-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.apprenticeship-page .highlight-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.apprenticeship-page .highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.apprenticeship-page .highlight-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.apprenticeship-page .highlight-card h3 {
+  font-size: 1.25rem;
+  color: #004aad;
+  margin-bottom: 0.5rem;
+}
+
+.apprenticeship-page .highlight-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .apprenticeship-page .highlight-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .apprenticeship-page .highlight-card {
+    width: 90%;
+  }
+
+  .apprenticeship-page .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .apprenticeship-page .apprenticeship-cta h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .apprenticeship-page .apprenticeship-hero-overlay h1 {
+    font-size: 1.6rem;
+  }
+
+  .apprenticeship-page .apprenticeship-hero-overlay .tagline {
+    font-size: 0.95rem;
+  }
+}
