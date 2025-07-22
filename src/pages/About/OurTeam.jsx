@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./OurTeam.css"
+import { FaLinkedinIn } from "react-icons/fa"
 
 const OurTeam = () => {
   const [selectedMember, setSelectedMember] = useState(null)
@@ -68,7 +69,7 @@ const OurTeam = () => {
           </div>
         )}
         {member.email && <p><strong>Email:</strong> <a href={`mailto:${member.email}`}>{member.email}</a></p>}
-        {member.linkedin && <p><strong>LinkedIn:</strong> <a href={member.linkedin} target="_blank" rel="noreferrer">Profile</a></p>}
+        {member.linkedin && <p><strong>LinkedIn:</strong> <a href={member.linkedin} target="_blank" rel="noreferrer"><FaLinkedinIn /></a></p>}
       </div>
     </div>
   )

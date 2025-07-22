@@ -1,6 +1,6 @@
 /* Stats Section */
 .stats-section {
-  background: var(--white);
+  background: var(--gray-100);
   padding: var(--spacing-3xl) 0;
   margin-top: -50px;
   position: relative;

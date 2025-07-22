@@ -1,6 +1,7 @@
 /* Company Profile Page Styles */
 .company-profile-page {
   padding-top: 80px;
+  /* background-color: rgb(162, 183, 218); */
 }
 
 /* Hero Section */
@@ -34,7 +35,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(59, 130, 246, 0.6));
+  background: linear-gradient(135deg, rgb(104 148 245 / 80%), rgb(112 115 120 / 60%));
   z-index: -1;
 }
 
@@ -233,7 +234,7 @@
 
 /* Timeline Section */
 .cp-timeline-section {
-  background-color: var(--gray-50);
+  background-color:#cbd5e1;
 }
 
 .cp-timeline {
@@ -412,6 +413,7 @@
   .cp-statistics-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
+    background-color: #cbd5e1;
   }
 
   .cp-values-grid {
