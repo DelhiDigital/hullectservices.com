@@ -1,5 +1,16 @@
 import { Link } from "react-router-dom"
 import "./Footer.css"
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaWhatsapp,
+  FaEnvelope,
+  FaGlobe,
+  FaPhone,
+} from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -47,15 +58,15 @@ const Footer = () => {
             </p>
             <div className="footer-contact">
               <div className="contact-item">
-                <span className="contact-icon">📧</span>
+                <span className="contact-icon"><FaEnvelope size={(30)} /></span>
                 <a href="mailto:connect@hullectservices.com">connect@hullectservices.com</a>
               </div>
               <div className="contact-item">
-                <span className="contact-icon">📞</span>
+                <span className="contact-icon"><FaPhone size={(30)} /></span>
                 <a href="tel:9120018844">+91 9120018844</a>
               </div>
               <div className="contact-item">
-                <span className="contact-icon">🌐</span>
+                <span className="contact-icon"><FaGlobe size={(30)} /></span>
                 <a href="https://www.hullectservices.com" target="_blank" rel="noopener noreferrer">
                   www.hullectservices.com
                 </a>
@@ -123,9 +134,25 @@ const Footer = () => {
           <div className="footer-bottom-content">
             <p>&copy; {currentYear} Hullect Services Private Limited. All rights reserved.</p>
             <div className="footer-bottom-links">
-              <a href="/privacy-policy">Privacy Policy</a>
-              <a href="/terms-of-service">Terms of Service</a>
-              <a href="/sitemap">Sitemap</a>
+              <a href="https://www.facebook.com/hullectservicespvtltd/?ti=as"  target="_blank" rel="noopener noreferrer">
+                      <FaFacebookF  size={30}/>
+                    </a>
+                    <a href="https://www.instagram.com/hullectservices/" target="_blank" rel="noopener noreferrer">
+                      <FaInstagram size={30} />
+                    </a>
+                    <a href="https://www.linkedin.com/posts/hullect-services-pvt-ltd_hullect-services-pvt-ltd-linkedin-activity-6826091504340144128-U725/"  target="_blank" rel="noopener noreferrer">
+                      <FaLinkedinIn size={30} />
+                    </a>
+                    <a href="https://www.google.com/maps/place/Hullect+Services+Private+Limited/@26.8266997,81.0084445,17z/data=!3m1!4b1!4m6!3m5!1s0x399be3989c5e0a3d:0xa7dfa5771d5febbb!8m2!3d26.8266997!4d81.0084445!16s%2Fg%2F11mx5wp9zf!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                      <FaMapMarkerAlt size={30} />
+                    </a>
+                    <a href="tel:+91 91200 18844" >
+                      <FaPhoneAlt size={30} />
+                    </a>
+                    <a href="https://wa.me/919120018844" target="_blank" rel="noopener noreferrer">
+                      <FaWhatsapp size={30} />
+                    </a>
+
             </div>
           </div>
         </div>

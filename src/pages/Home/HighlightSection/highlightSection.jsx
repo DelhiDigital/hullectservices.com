@@ -11,7 +11,7 @@ const HighlightSection = () => {
     technology: {
       title: "Technology Skills & Solutions",
       subtitle: "Bridging talent and innovation",
-      image: "/placeholder.svg?height=400&width=600",
+      // image: "/Technology.png?height=400&width=600",
       sections: [
         {
           heading: "In-Demand Tech Skills",
@@ -30,7 +30,7 @@ const HighlightSection = () => {
     partnerships: {
       title: "Strategic Career & Talent Partnerships",
       subtitle: "Connecting opportunities with people",
-      image: "/placeholder.svg?height=400&width=600",
+      // image: "/placeholder.svg?height=400&width=600",
       sections: [
         {
           heading: "Professional Networks",
@@ -49,7 +49,7 @@ const HighlightSection = () => {
     training: {
       title: "Professional Development & Training",
       subtitle: "Empowering careers through learning",
-      image: "/placeholder.svg?height=400&width=600",
+      // image: "/placeholder.svg?height=400&width=600",
       sections: [
         {
           heading: "Career-Focused Training",
@@ -118,7 +118,7 @@ const HighlightSection = () => {
           <div className="content-wrapper">
             {/* Left Side - Image */}
             <div className="content-image-section">
-              <img src={currentData.image || "/placeholder.svg"} alt={currentData.title} className="content-image" />
+              {/* <img src={currentData.image || "/placeholder.svg"} alt={currentData.title} className="content-image" /> */}
               <div className="image-overlay">
                 <h3 className="content-title">{currentData.title}</h3>
                 <p className="content-subtitle">{currentData.subtitle}</p>

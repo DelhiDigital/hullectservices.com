@@ -18,6 +18,15 @@ const Media = () => {
 
   const newsArticles = [
     {
+      title: "Government Recognition for Timely GST Compliance",
+      excerpt:
+        "Hullect Services Private Limited receives a Certificate of Appreciation from the Ministry of Finance for prompt GST filing and contributions during FY 2024–25.",
+      date: "July 07, 2025",
+      category: "Awards",
+      image: "/Certificate.jpg?w=400&h=250&fit=crop&crop=center",
+    },
+
+    {
       title: "Team Excellence Awards Presented on Foundation Day",
       excerpt:
         "Outstanding team members were recognized for their exceptional contributions during our annual Foundation Day celebration.",
@@ -36,15 +45,7 @@ const Media = () => {
       image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&h=250&fit=crop&crop=center",
       // readTime: "3 min read",
     },
-    {
-      title: "ISO 9001:2015 Certification Renewed for Quality Excellence",
-      excerpt:
-        "Hullect Services successfully renews its ISO certification, reinforcing commitment to quality management systems.",
-      date: "February 28, 2025",
-      category: "Achievements",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop&crop=center",
-      // readTime: "2 min read",
-    },
+
     {
       title: "Digital Transformation in HR: Our Technology Initiative",
       excerpt: "Launching new mobile-enabled solutions for better workforce management and employee experience.",
@@ -71,7 +72,7 @@ const Media = () => {
       image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&h=250&fit=crop&crop=center",
       // readTime: "5 min read",
     },
-    
+
   ]
 
   // const pressReleases = [

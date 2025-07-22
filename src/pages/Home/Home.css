@@ -477,6 +477,7 @@ h6 {
 
 .homecta-actions {
   display: flex;
+  flex-direction: row;
   gap: var(--spacing-lg);
   justify-content: center;
   align-items: center;
@@ -699,6 +700,7 @@ h6 {
   }
 
   .homecta-actions {
+    display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
   }
@@ -874,6 +876,12 @@ h6 {
   .container {
     padding: 0 var(--spacing-sm);
   }
+
+  .homecta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
 }
 
 /* Extra Small Mobile (below 320px) */
@@ -881,6 +889,12 @@ h6 {
   .hero-content {
     padding: 0 var(--spacing-xs);
     width: 100%;
+  }
+
+  .homecta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
   }
 
   .hero-title {

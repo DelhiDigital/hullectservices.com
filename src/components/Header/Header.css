@@ -286,10 +286,10 @@
 }
 
 .dropdown-submenu a:hover {
-  background-color: var(--primary-blue);
-  color: var(--white);
+  /* background-color: var(--primary-blue); */
+  color: var(--primary-blue);
   transform: translateX(5px);
-  border-left-color: var(--secondary-orange);
+  /* border-left-color: var(--secondary-orange); */
 }
 
 .header-actions {

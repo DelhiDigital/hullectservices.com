@@ -36,17 +36,12 @@ const Contact = () => {
     {
       icon: "📞",
       title: "Phone Numbers",
-      details: ["0522 3504137"],
+      details: ["+91-9120018844"],
     },
     {
       icon: "📧",
       title: "Email Addresses",
       details: ["connect@hullectservices.com", "corphr@hullectservices.com"],
-    },
-    {
-      icon: "🌐",
-      title: "Website",
-      details: ["www.hullectservices.com"],
     },
   ]
 
@@ -54,47 +49,49 @@ const Contact = () => {
     {
       city: "Lucknow",
       address: "Office No - SF - 05E, 2nd Floor,Riverview Arcade Plot No - 4/17, Sector 4, Gomti Nagar Extension, Lucknow, Uttar Pradesh 226010",
-      phone: "0522 3504137",
+      phone: "+91-9120018844",
       email: "connect@hullectservices.com",
-      image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=300&h=200&fit=crop&crop=center",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=Connaught+Place+New+Delhi+India",
-      coordinates: "28.6315,77.2167",
+      image: "/Hullectmapbanner.png",
+      mapUrl: "https://maps.app.goo.gl/dB4cv2LKypLQTFiV9",
+      coordinates: "",
+    },
+    {
+      city: "Delhi",
+      address: "B1 / E13, NH-19, near Mohan Estate, Block E, Mohan Cooperative Ind, Area, New Delhi, Delhi 110044",
+      phone: "+91-9120018844",
+      email: "connect@hullectservices.com",
+      image: "/Delhi.png",
+      mapUrl: "https://maps.app.goo.gl/As3zPUDmgnPUg5U99",
+      // coordinates: "28.6315,77.2167",
     },
     {
       city: "Varanasi",
       address: "C/O Churamanpur,Near Bank of BarodaRegional Office , Chandpur,Varanasi 221106",
-      phone: "+91-9785-005-691",
+      phone: "+91-9120018844",
       email: "connect@hullectservices.com",
       image: "/Varanasi.png",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=Bandra+Kurla+Complex+Mumbai+India",
-      coordinates: "19.0596,72.8656", // Mumbai coordinates
+      // mapUrl: "https://www.google.com/maps/search/?api=1&query=Bandra+Kurla+Complex+Mumbai+India",
+      // coordinates: "19.0596,72.8656", // Mumbai coordinates
     },
     {
       city: "bangalore",
       address: "No. 258, 4th main,near Shrinivasa temple,Kithiganur, T.C. Palya road,K.R. Puram bangalore 560049",
-      phone: "+91 80 9876 5432",
+      phone: "+91-9120018844",
       email: "connect@hullectservices.com",
       image: "/bangalore.png",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=Electronic+City+Bangalore+India",
-      coordinates: "12.9716,77.5946", // Bangalore coordinates
+      // mapUrl: "https://www.google.com/maps/search/?api=1&query=Electronic+City+Bangalore+India",
+      // coordinates: "12.9716,77.5946", // Bangalore coordinates
     },
     {
       city: "Rajasthan",
       address: "G-205 ,RIICO Industrial area Bagru,Ajmer Road,Jaipur -303007",
-      phone: "+91-978 500 5691",
+      phone: "+91-9120018844",
       email: "connect@hullectservices.com",
       image: "/Rajasthan.png",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=OMR+Road+Chennai+India",
-      coordinates: "13.0827,80.2707", // Chennai coordinates
+      // mapUrl: "https://www.google.com/maps/search/?api=1&query=OMR+Road+Chennai+India",
+      // coordinates: "13.0827,80.2707", // Chennai coordinates
     },
-    {
-      address: "Office No - SF - 05E, 2nd Floor,Riverview Arcade Plot No - 4/17, Sector 4, Gomti Nagar Extension, Lucknow, Uttar Pradesh 226010",
-      phone: "0522 3504137",
-      email: "connect@hullectservices.com",
-      image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=300&h=200&fit=crop&crop=center",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=Connaught+Place+New+Delhi+India",
-      coordinates: "28.6315,77.2167",
-    },
+    
   ]
 
   const services = [
@@ -258,7 +255,7 @@ const Contact = () => {
                 ))}
               </div>
 
-              <div className="quick-contact">
+              {/* <div className="quick-contact">
                 <h4>Quick Contact</h4>
                 <div className="quick-contact-buttons">
                   <a href="tel:9120018844" className="btn btn-outline">
@@ -268,7 +265,7 @@ const Contact = () => {
                     📧 Email Us
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

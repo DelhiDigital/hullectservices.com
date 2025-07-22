@@ -219,7 +219,7 @@ body {
 /* Cards */
 .card,
 .process-step,
-.service-card {
+.security-service-card {
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
@@ -230,13 +230,13 @@ body {
 
 .card:hover,
 .process-step:hover,
-.service-card:hover {
+.security-service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* Service Cards */
-.service-card {
+.security-service-card {
   text-align: center;
   overflow: hidden;
   display: flex;
@@ -253,10 +253,14 @@ body {
   transition: transform 0.3s ease;
 }
 
-.service-card:hover .service-image {
-  transform: scale( 1.05);
+.security-service-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  scale: 1.02;
 }
-
+/* .service-image:hover {
+  transform: scale(0.95);
+} */
 .service-title {
   font-size: 1.2rem;
   font-weight: 600;
@@ -366,11 +370,11 @@ body {
 }
 
 /* Service Cards Section */
-.service-cards {
-  background-color: #ffffff;
+.security-service-cards {
+  background-color: #d8e3e8;
 }
 
-.service-cards .container {
+.security-service-cards .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -484,7 +488,7 @@ body {
   
   .card,
   .process-step,
-  .service-card {
+  .security-service-card {
     padding: 1.5rem;
   }
   
@@ -523,7 +527,7 @@ body {
 /* Ensure all sections are visible */
 .hero-section,
 .intro-split-section,
-.service-cards,
+.security-service-cards,
 .why-us,
 .cta-section,
 .process-section {

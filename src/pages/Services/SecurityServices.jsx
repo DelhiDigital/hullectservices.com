@@ -110,12 +110,12 @@ const SecurityPage = () => {
       </section>    
 
       {/* Service Cards */}
-      <section className="service-cards section">
+      <section className="security-service-cards section">
         <div className="container">
           <h2 className="heading-secondary mb-xl">Explore Our Services</h2>
           <div className="grid-4-cols">
             {services.map((service, index) => (
-              <div className="service-card" key={index}>
+              <div className="security-service-card" key={index}>
                 <img 
                   src={service.image || "/placeholder.svg"} 
                   alt={service.name}
