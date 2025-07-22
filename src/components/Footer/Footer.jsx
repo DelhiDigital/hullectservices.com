@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import "./Footer.css"
+import logo from "./whiteLogo.png"
 import {
   FaFacebookF,
   FaInstagram,
@@ -49,7 +50,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <img src="./whiteLogo.png" alt="Hullect Services" />
+              <img src={logo} alt="Hullect Services" />
               {/* <span className="footer-logo-text">Hullect Services</span> */}
             </div>
             <p className="footer-description">

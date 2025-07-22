@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa"
 import "./Header.css"
+import logo from "./Logo.png"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -75,7 +76,7 @@ const Header = () => {
         <div className="header-content">
           <div className="logo-wrapper">
             <Link to="/" className="logo" onClick={closeMenu}>
-              <img src="./Logo.png" alt="Hullect Services" />
+              <img src={logo} alt="Hullect Services" />
             </Link>
           </div>
 
