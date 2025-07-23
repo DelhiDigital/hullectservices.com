@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa"
 import "./Header.css"
-import logo from "./Logo.png"
+import logo from "/Logo.png"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

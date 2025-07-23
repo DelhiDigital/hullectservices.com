@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "./Footer.css"
-import logo from "./whiteLogo.png"
+import logo from "/whiteLogo.png"
 import {
   FaFacebookF,
   FaInstagram,
