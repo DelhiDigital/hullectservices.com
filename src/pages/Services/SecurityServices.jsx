@@ -140,6 +140,7 @@ const SecurityPage = () => {
           <div className="grid-2-cols">
             <div className="image-col">
               <img 
+              /*images changed to a more relevant image*/
                 src="/why-security-page.png?w=500&h=400&fit=crop&crop=center" 
                 alt="Why Choose Hullect Security Services" 
                 className="why-image" 
