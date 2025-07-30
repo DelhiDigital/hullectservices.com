@@ -185,7 +185,7 @@ const Partners = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="testimonials-section section">
+      {/* <section className="testimonials-section section">
         <div className="container">
           <div className="section-header text-center">
             <span className="section-tag">Client Testimonials</span>
@@ -220,7 +220,7 @@ const Partners = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Case Studies */}
       <section className="case-studies-section section">
