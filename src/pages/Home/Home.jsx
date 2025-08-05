@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"
 import HighlightSection from "./HighlightSection/highlightSection"
 import "./Home.css"
 import StatisticsSection from "./StatisticsSection/StatisticsSection"
+import { FaRegBuilding, FaSearch, FaUsers, FaShieldAlt } from "react-icons/fa"
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, TextPlugin)
@@ -23,25 +24,25 @@ const Home = () => {
 
   const services = [
     {
-      icon: "👥",
+      icon: <FaUsers />,
       title: "General Staffing",
       description: "Temporary, contract, and permanent staffing solutions",
       link: "/services/staffing",
     },
     {
-      icon: "🔍",
+      icon: <FaSearch />,
       title: "Permanent Recruitment",
       description: "Executive search and selection services",
       link: "/services/search-recruitment",
     },
     {
-      icon: "🏢",
+      icon: <FaRegBuilding />,
       title: "Managed Services",
       description: "Outcome-based HR-driven outsourcing and security services",
       link: "/services/managed-services",
     },
     {
-      icon: "🛡️",
+      icon: <FaShieldAlt />,
       title: "Security Services",
       description: "Comprehensive security solutions for businesses",
       link: "/services/SecurityServices",

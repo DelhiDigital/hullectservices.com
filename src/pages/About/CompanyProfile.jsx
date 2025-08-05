@@ -1,4 +1,6 @@
 import "./CompanyProfile.css"
+import React from "react"
+import { FaCalendarAlt, FaUsers, FaHandshake, FaBuilding, FaStar, FaAward, FaClipboardCheck, FaShieldAlt, FaBalanceScale, FaLightbulb, FaBullseye, FaHandsHelping } from "react-icons/fa"
 
 const CompanyProfile = () => {
   const milestones = [
@@ -35,22 +37,22 @@ const CompanyProfile = () => {
     {
       title: "ISO 9001:2015",
       description: "Quality Management Systems",
-      icon: "🏆",
+      icon: <FaClipboardCheck />,
     },
     {
       title: "MSME Registered",
       description: "Ministry of Micro, Small & Medium Enterprises",
-      icon: "📋",
+      icon: <FaBuilding />,
     },
     {
       title: "PF & ESI Compliant",
       description: "Employee Provident Fund & State Insurance",
-      icon: "🛡️",
+      icon: <FaShieldAlt />,
     },
     {
       title: "Labor Law Compliance",
       description: "Full compliance with Indian Labor Laws",
-      icon: "⚖️",
+      icon: <FaBalanceScale />,
     },
   ]
 
@@ -58,27 +60,27 @@ const CompanyProfile = () => {
     {
       number: "4+",
       label: "Years of Excellence",
-      icon: "📅",
+      icon: <FaCalendarAlt />,
     },
     {
       number: "10,000+",
       label: "Successful Placements",
-      icon: "👥",
+      icon: <FaUsers />,
     },
     {
       number: "100+",
       label: "Happy Clients",
-      icon: "🤝",
+      icon: <FaHandshake />,
     },
     {
       number: "5+",
       label: "Office Locations",
-      icon: "🏢",
+      icon: <FaBuilding />,
     },
     {
       number: "99%",
       label: "Client Satisfaction",
-      icon: "⭐",
+      icon: <FaStar />,
     },
   ]
 
@@ -86,32 +88,32 @@ const CompanyProfile = () => {
     {
       title: "Integrity",
       description: "We maintain the highest standards of honesty and transparency in all our dealings.",
-      icon: "🤝",
+      icon: <FaHandshake />,
     },
     {
       title: "Excellence",
       description: "We strive for excellence in every service we provide, exceeding client expectations.",
-      icon: "⭐",
+      icon: <FaStar />,
     },
     {
       title: "Innovation",
       description: "We embrace technology and innovative solutions to stay ahead in the industry.",
-      icon: "💡",
+      icon: <FaLightbulb />,
     },
     {
       title: "Commitment",
       description: "We are committed to our clients' success and our employees' growth.",
-      icon: "🎯",
+      icon: <FaBullseye />,
     },
     {
       title: "Reliability",
       description: "We deliver consistent, dependable services that our clients can count on.",
-      icon: "🛡️",
+      icon: <FaShieldAlt />,
     },
     {
       title: "Respect",
       description: "We treat everyone with dignity and respect, fostering inclusive relationships.",
-      icon: "🤲",
+      icon: <FaHandsHelping />,
     },
   ]
 

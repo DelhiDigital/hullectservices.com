@@ -1,26 +1,28 @@
 import "./About.css"
 import { Link } from "react-router-dom"
+import { FaBuilding, FaMobileAlt, FaBullseye, FaShieldAlt, FaRocket } from "react-icons/fa"
+
 
 const About = () => {
   const features = [
     {
-      icon: "🏢",
+      icon: <FaBuilding />,
       title: "Compliance & Risk Management",
       description:
         "Centralized compliance department with panel of country's best labor lawyers and comprehensive risk assessment processes.",
     },
     {
-      icon: "📱",
+      icon: <FaMobileAlt />,
       title: "Technology Solutions",
       description:"Mobile-enabled technology solutions including GPS attendance, employee self-service, and HRMS implementation.",
     },
     {
-      icon: "🎯",
+      icon: <FaBullseye />,
       title: "Outcome-Based Services",
       description: "HR-driven outsourcing of business processes with focus on measurable results and performance.",
     },
     {
-      icon: "🛡️",
+      icon: <FaShieldAlt />,
       title: "Quality Assurance",
       description: "ISO 9001:2015 certified with comprehensive quality review processes and control mechanisms.",
     },
@@ -120,7 +122,7 @@ const About = () => {
         <div className="container">
           <div className="about-vm-grid">
             <div className="about-vm-card">
-              <div className="about-vm-icon">🎯</div>
+              <div className="about-vm-icon"><FaBullseye /></div>
               <h3 className="about-vm-title">Our Vision</h3>
               <p className="about-vm-description">
                 At Hullect, we’re committed to reducing financial pressure for businesses and individuals across India. By simplifying systems and supporting local enterprises, we aim to create real economic and social value. Our mission is to empower people to grow stronger, become self-reliant, and achieve more right from the grassroots to the nation.
@@ -128,7 +130,7 @@ const About = () => {
             </div>
 
             <div className="about-vm-card">
-              <div className="about-vm-icon">🚀</div>
+              <div className="about-vm-icon"><FaRocket /></div>
               <h3 className="about-vm-title">Our Mission</h3>
               <p className="about-vm-description">
                 We connect businesses with the right talent to fuel growth and success through strategic staffing solutions. Our commitment lies in delivering exceptional service, building lasting partnerships, and driving innovation in workforce management ensuring our clients and candidates are always prepared to meet the demands of a dynamic, evolving market.

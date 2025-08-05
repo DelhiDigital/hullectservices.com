@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 import "./highlightSection.css"
+import { FaBolt, FaHandshake, FaGraduationCap } from "react-icons/fa"
+
 
 const HighlightSection = () => {
   const [activeTab, setActiveTab] = useState("technology")
@@ -94,21 +96,21 @@ const HighlightSection = () => {
             className={`tab-button ${activeTab === "technology" ? "active" : ""}`}
             onClick={() => handleTabChange("technology")}
           >
-            <span className="tab-icon">⚡</span>
+            <span className="tab-icon"><FaBolt /></span>
             Technology
           </button>
           <button
             className={`tab-button ${activeTab === "partnerships" ? "active" : ""}`}
             onClick={() => handleTabChange("partnerships")}
           >
-            <span className="tab-icon">🤝</span>
+            <span className="tab-icon"><FaHandshake /></span>
             Partnerships
           </button>
           <button
             className={`tab-button ${activeTab === "training" ? "active" : ""}`}
             onClick={() => handleTabChange("training")}
           >
-            <span className="tab-icon">🎓</span>
+            <span className="tab-icon"><FaGraduationCap /></span>
             Training
           </button>
         </div>
