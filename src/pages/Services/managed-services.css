@@ -1,5 +1,5 @@
 .managed-services-page {
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;

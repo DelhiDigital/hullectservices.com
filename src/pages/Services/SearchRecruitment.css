@@ -3,7 +3,7 @@
 ============================ */
 .search-recruitment-page {
   padding-top: 0px;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   background-color: #d2e1f5;
 }
 

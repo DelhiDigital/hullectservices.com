@@ -248,6 +248,9 @@
   .hero-title {
     font-size: var(--text-3xl);
   }
+  /* .hero-content {
+    font-size: 1.5rem ;
+  } */
 
   .hero-stats {
     flex-direction: column;

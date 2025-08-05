@@ -1,6 +1,6 @@
 /* General Layout */
 .our-team-page {
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   color: #222;
   background-color: #e0dfdf;
   padding-bottom: 80px; /* Increased space between cards & footer */

@@ -3,6 +3,20 @@
   background-color: #f9fafe;
 }
 
+@media screen and (max-width: 768px) {
+  .home {
+    padding-top: 0px; /* Adjust padding for smaller screens */
+  }
+  
+}
+
+@media screen and (max-width: 380px) {
+  .home {
+    padding-top: 60px; /* Further adjust padding for very small screens */
+  }
+  
+}
+
 .hero {
   min-height: 90vh;
   display: flex;
