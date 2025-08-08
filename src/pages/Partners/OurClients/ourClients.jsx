@@ -131,12 +131,12 @@ const TrustedPartnerSection = () => {
       logo: "./Techmahindra.png?height=60&width=120",
       url: "https://example.com/7",
     },
-    // {
-    //   id: 10,
-    //   name: "Company Ten",
-    //   logo: "./TechnicalAssociates.png?height=60&width=120",
-    //   url: "https://example.com/8",
-    // },
+    {
+      id: 10,
+      name: "Company Ten",
+      logo: "./jiodigital.png?height=80&width=140",
+      url: "https://example.com/8",
+    },
 
   ]
 

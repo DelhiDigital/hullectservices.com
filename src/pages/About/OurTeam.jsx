@@ -13,7 +13,7 @@ const OurTeam = () => {
       image: "/Manish.png",
       bio: "Manish Pratap Brings along 22 years of experience across industries spanning Services & Manufacturing with a focus on quality services, with customer satisfaction and business development. His core expertise lies into overall business growth, recruitment, operations, customer service, payroll & compliances and skill development.",
       expertise: ["Staffing Business Management", "Talent Acquisition", "Delivery Ops", "Team Management and Team Building", "Employee Retention"],
-      email: "manish@hullectservices.com",
+      email: "manishpratap@hullectservices.com",
       linkedin: "https://www.linkedin.com/in/manish-pratap-singh-72938342/",
     },
     {
@@ -23,7 +23,7 @@ const OurTeam = () => {
       image: "/Shalini.png",
       bio: "Dr.Shalini Singh is a seasoned professional with the passion to achieve operational excellence! Instrumental in great team building and business management. She is a Gold Medalist in PHD.",
       expertise: ["Culture building of organization", "Employee engagement", "Investments and financials", "Process optimization","Quality assurance"],
-      email: "shalini@hullectservices.com",
+      email: "connect@hullectservices.com",
       // linkedin: "#",
     },
     {
@@ -43,7 +43,7 @@ const OurTeam = () => {
       image: "/Arvind.png",
       bio: "Arvind is a serial entrepreneur who has had high-impact performances in building companies and accelerating commercialization and growth. He has 20+ years of extensive experience leading operations, retail, supply chain, and business strategy in Fortune 100 and startup companies.",
       expertise: ["Business Management", "Global Project Management", "Supply Chain Management", "Business Strategy", "Building Organization",],
-      email: "arvind@hullectservices.com",
+      email: "connect@hullectservices.com",
       // linkedin: "#",
     },
   ]
