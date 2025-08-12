@@ -23,9 +23,26 @@ const ApprenticeshipProgram = () => {
   return (
     <div className="apprenticeship-page">
       <section className="apprenticeship-hero">
-        <div className="apprenticeship-banner-wrapper">
+        <div className="apprenticeship-banner-wrapper" style={{ position: "relative" }}>
           <img src={bannerImg} alt="Apprenticeship Banner" className="apprenticeship-banner-image shift-up" />
-          <div className="apprenticeship-hero-overlay">
+          {/* Overlay */}
+          <div
+            className="apprenticeship-banner-overlay"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "rgba(0, 0, 0, 0.5)",
+              zIndex: 1,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          ></div>
+          <div className="apprenticeship-hero-overlay" style={{ position: "absolute", zIndex: 2, width: "100%" }}>
             <h1>Apprenticeship Program</h1>
             <p className="tagline">Transforming Skills, Empowering Youth</p>
           </div>

@@ -51,7 +51,7 @@ const Contact = () => {
       address: "Office No - SF - 05E, 2nd Floor,Riverview Arcade Plot No - 4/17, Sector 4, Gomti Nagar Extension, Lucknow, Uttar Pradesh 226010",
       phone: "+91-9120018844",
       email: "connect@hullectservices.com",
-      image: "/Hullectmapbanner.png",
+      image: "/Lucknow.jpg",
       mapUrl: "https://maps.app.goo.gl/dB4cv2LKypLQTFiV9",
       coordinates: "",
     },
@@ -74,7 +74,7 @@ const Contact = () => {
       // coordinates: "19.0596,72.8656", // Mumbai coordinates
     },
     {
-      city: "bangalore",
+      city: "Bangalore",  
       address: "No. 258, 4th main,near Shrinivasa temple,Kithiganur, T.C. Palya road,K.R. Puram bangalore 560049",
       phone: "+91-9120018844",
       email: "connect@hullectservices.com",
@@ -107,8 +107,8 @@ const Contact = () => {
   // Head office details for map
   const headOffice = {
     address: "Office No - SF - 05E, 2nd Floor,Riverview Arcade Plot No - 4/17, Sector 4, Gomti Nagar Extension, Lucknow, Uttar Pradesh 226010",
-    coordinates: "28.6315,77.2167",
-    mapUrl: "https://maps.app.goo.gl/RMNzB1A5uAQAv7XB8",
+    coordinates: "28.6315,77.2167", 
+    mapUrl: "https://maps.app.goo.gl/dB4cv2LKypLQTFiV9",
   }
 
   return (
@@ -329,7 +329,7 @@ const Contact = () => {
               {/* Google Maps Embed with Zoom Controls */}
               <iframe
                 className="interactive-map"
-                src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.2!2d${headOffice.coordinates.split(",")[1]}!3d${headOffice.coordinates.split(",")[0]}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzUzLjQiTiA3N8KwMTMnMDAuMSJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin&zoom=15`}
+                src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.850214241601!2d81.00844939999999!3d26.826765899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3989c5e0a3d%3A0xa7dfa5771d5febbb!2sHullect%20Services%20Private%20Limited!5e1!3m2!1sen!2sin!4v1754977345653!5m2!1sen!2sin`}
                 width="100%"
                 height="500"
                 style={{ border: 0 }}
@@ -340,7 +340,7 @@ const Contact = () => {
               ></iframe>
 
               {/* Map Overlay Info */}
-              <div className="map-overlay-info">
+              {/* <div className="map-overlay-info">
                 <div className="map-info-card">
                   <h4>🏢 Head Office</h4>
                   <p>{headOffice.address}</p>
@@ -353,7 +353,7 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Map Controls Info */}
               <div className="map-controls-info">

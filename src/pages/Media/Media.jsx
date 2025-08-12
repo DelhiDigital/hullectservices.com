@@ -18,7 +18,7 @@ const Media = () => {
 
   const newsArticles = [
     {
-      title: "Government Recognition for Timely GST Compliance",
+      title: "Ministry of Finance Recognition for Timely GST Compliance",
       excerpt:
         "Hullect Services Private Limited receives a Certificate of Appreciation from the Ministry of Finance for prompt GST filing and contributions during FY 2024–25.",
       date: "July 07, 2025",

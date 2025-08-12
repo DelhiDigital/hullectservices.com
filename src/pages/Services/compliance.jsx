@@ -20,17 +20,51 @@ const acts = [
 const Compliance = () => {
   return (
     <div className="compliance-page">
-      <section className="compliance-hero-wrapper">
-        <img src={bannerImg} alt="Compliance Banner" className="compliance-banner-image" />
-        <div className="compliance-hero-overlay">
+      <section className="compliance-hero-wrapper" style={{ position: "relative" }}>
+        <img
+          src={bannerImg}
+          alt="Compliance Banner"
+          className="compliance-banner-image"
+          style={{ width: "100%", display: "block" }}
+        />
+        <div
+          className="compliance-hero-overlay"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            width: "100%",
+            height: "100%",
+            zIndex: 2,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            color: "#fff",
+            padding: "0 2rem",
+          }}
+        >
           <h1>Compliance Management</h1>
           <p>
             Our team ensures complete adherence to labor regulations and compliance frameworks across industries. We
             support you in staying compliant with laws and standards through updated practices and expert guidance.
           </p>
         </div>
+        {/* Linear gradient overlay */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "rgba(0, 0, 0, 0.6)",
+            pointerEvents: "none",
+            zIndex: 1,
+          }}
+        />
       </section>
-      
 
       <section className="compliance-acts">
         <div className="container">

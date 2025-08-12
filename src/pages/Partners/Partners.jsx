@@ -5,14 +5,11 @@ import OurPartner from "./OurClients/ourClients"
 const Partners = () => {
   const clientSectors = [
   { name: "Retail", icon: "🛍️", industry: "Retail" },
-  { name: "Telecom", icon: "📡", industry: "Telecommunications" },
+  
   { name: "FMCG", icon: "🛒", industry: "Consumer Goods" },
   { name: "FMCD", icon: "🚚", industry: "Consumer Durables" },
-  { name: "E-Commerce", icon: "🛍️", industry: "E-Commerce & Retail" },
   { name: "BFSI", icon: "💰", industry: "Banking & Finance" },
-  { name: "Manufacturing", icon: "🏭", industry: "Manufacturing & Production" },
   { name: "Agriculture", icon: "🌾", industry: "Agriculture" },
-  { name: "Health Care", icon: "🏥", industry: "Healthcare & Medical" },
   { name: "Life Sciences", icon: "🔬", industry: "Life Sciences" },
   { name: "Pharma", icon: "💊", industry: "Pharmaceuticals" },
   { name: "Hospitality", icon: "🛎️", industry: "Hospitality" },
@@ -26,6 +23,13 @@ const Partners = () => {
   { name: "Telecommunications", icon: "📡", industry: "Telecom" },
   { name: "Education & Training", icon: "🎓", industry: "Education" },
   { name: "Logistics & Supply Chain", icon: "🚚", industry: "Logistics" },
+  { name: "Energy & Power", icon: "⚡", industry: "Energy & Power" },
+  { name: "Public Sector & Govt. Project", icon: "🏛️", industry: "Public Sector" },
+  { name: "Media & Entertainment", icon: "🎬", industry: "Media & Entertainment" },
+  { name: "Real Estate & Infrastructure", icon: "🏗️", industry: "Real Estate & Infrastructure" },
+  { name: "Start-up & Emerging Business", icon: "🚀", industry: "Start-up" },
+  { name: "Automotive", icon: "🚗", industry: "Automotive" },
+  
 ];
   const testimonials = [
     {

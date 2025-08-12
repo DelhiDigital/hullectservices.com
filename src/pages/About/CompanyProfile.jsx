@@ -1,6 +1,6 @@
 import "./CompanyProfile.css"
 import React from "react"
-import { FaCalendarAlt, FaUsers, FaHandshake, FaBuilding, FaStar, FaAward, FaClipboardCheck, FaShieldAlt, FaBalanceScale, FaLightbulb, FaBullseye, FaHandsHelping } from "react-icons/fa"
+
 
 const CompanyProfile = () => {
   const milestones = [
@@ -37,22 +37,22 @@ const CompanyProfile = () => {
     {
       title: "ISO 9001:2015",
       description: "Quality Management Systems",
-      icon: <FaClipboardCheck />,
+      icon: "📋",
     },
     {
       title: "MSME Registered",
       description: "Ministry of Micro, Small & Medium Enterprises",
-      icon: <FaBuilding />,
+      icon: "🏢",
     },
     {
       title: "PF & ESI Compliant",
       description: "Employee Provident Fund & State Insurance",
-      icon: <FaShieldAlt />,
+      icon: "🛡️",
     },
     {
       title: "Labor Law Compliance",
       description: "Full compliance with Indian Labor Laws",
-      icon: <FaBalanceScale />,
+      icon: "⚖️",
     },
   ]
 
@@ -60,27 +60,27 @@ const CompanyProfile = () => {
     {
       number: "4+",
       label: "Years of Excellence",
-      icon: <FaCalendarAlt />,
+      icon: "📅",
     },
     {
       number: "10,000+",
       label: "Successful Placements",
-      icon: <FaUsers />,
+      icon: "👥",
     },
     {
       number: "100+",
       label: "Happy Clients",
-      icon: <FaHandshake />,
+      icon: "🤝",
     },
     {
       number: "5+",
       label: "Office Locations",
-      icon: <FaBuilding />,
+      icon: "🏢",
     },
     {
       number: "99%",
       label: "Client Satisfaction",
-      icon: <FaStar />,
+      icon: "⭐",
     },
   ]
 
@@ -88,32 +88,32 @@ const CompanyProfile = () => {
     {
       title: "Integrity",
       description: "We maintain the highest standards of honesty and transparency in all our dealings.",
-      icon: <FaHandshake />,
+      icon: "🤝",
     },
     {
       title: "Excellence",
       description: "We strive for excellence in every service we provide, exceeding client expectations.",
-      icon: <FaStar />,
+      icon: "⭐",
     },
     {
       title: "Innovation",
       description: "We embrace technology and innovative solutions to stay ahead in the industry.",
-      icon: <FaLightbulb />,
+      icon: "💡",
     },
     {
       title: "Commitment",
       description: "We are committed to our clients' success and our employees' growth.",
-      icon: <FaBullseye />,
+      icon: "🎯",
     },
     {
       title: "Reliability",
       description: "We deliver consistent, dependable services that our clients can count on.",
-      icon: <FaShieldAlt />,
+      icon: "🛡️",
     },
     {
       title: "Respect",
       description: "We treat everyone with dignity and respect, fostering inclusive relationships.",
-      icon: <FaHandsHelping />,
+      icon: "🤝",
     },
   ]
 
@@ -182,7 +182,7 @@ const CompanyProfile = () => {
               </div>
             </div>
             <div className="cp-overview-image">
-              <img src="/CompanyProfile1.png" alt="Company Overview" />
+              <img src="/CompanyProfile2.png" alt="Company Overview" />
             </div>
           </div>
         </div>

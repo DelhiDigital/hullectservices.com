@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 import HighlightSection from "./HighlightSection/highlightSection"
 import "./Home.css"
 import StatisticsSection from "./StatisticsSection/StatisticsSection"
-import { FaRegBuilding, FaSearch, FaUsers, FaShieldAlt } from "react-icons/fa"
+
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, TextPlugin)
@@ -24,25 +24,25 @@ const Home = () => {
 
   const services = [
     {
-      icon: <FaUsers />,
+      icon: "👤",
       title: "General Staffing",
       description: "Temporary, contract, and permanent staffing solutions",
       link: "/services/staffing",
     },
     {
-      icon: <FaSearch />,
+      icon: "🔍",
       title: "Permanent Recruitment",
       description: "Executive search and selection services",
       link: "/services/search-recruitment",
     },
     {
-      icon: <FaRegBuilding />,
+      icon: "🛠️",
       title: "Managed Services",
       description: "Outcome-based HR-driven outsourcing and security services",
       link: "/services/managed-services",
     },
     {
-      icon: <FaShieldAlt />,
+      icon: "🛡️",
       title: "Security Services",
       description: "Comprehensive security solutions for businesses",
       link: "/services/SecurityServices",
@@ -106,7 +106,7 @@ const Home = () => {
       // Add typing cursor
       const cursor = document.createElement("span")
       cursor.className = "typing-cursor"
-      cursor.innerHTML = "|"
+      // cursor.innerHTML = "|"
       cursor.style.opacity = "1"
       cursor.style.animation = "blink 0.5s infinite"
       heroTitleRef.current.appendChild(cursor)

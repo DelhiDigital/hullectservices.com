@@ -18,7 +18,7 @@ const OurTeam = () => {
     },
     {
       name: "Dr.Shalini Singh",
-      // position: "Director",
+      position: "Director",
       experience: "15+ Years",
       image: "/Shalini.png",
       bio: "Dr.Shalini Singh is a seasoned professional with the passion to achieve operational excellence! Instrumental in great team building and business management. She is a Gold Medalist in PHD.",

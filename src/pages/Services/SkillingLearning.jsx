@@ -5,7 +5,7 @@ const CampusGrooming = () => {
   return (
     <div className="campus-page">
       <section className="campus-hero">
-        <div className="hero-overlay"></div>
+        <div className="skillpage-hero-overlay"></div>
         <div className="hero-content">
           <h1>Campus to Corporate Grooming</h1>
           <p>Empowering students and freshers with the right start to their career</p>

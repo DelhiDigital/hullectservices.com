@@ -310,7 +310,7 @@
 
 /* About Page CTA Section - Unique Classes to Prevent Conflicts */
 .about-page-cta-section {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+  background: linear-gradient(135deg, #28404b 0%, var(--primary-blue-dark) 100%);
   padding: var(--spacing-3xl) 0;
   text-align: center;
   color: var(--white);

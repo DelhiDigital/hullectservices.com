@@ -3,15 +3,17 @@
   margin: 0;
   padding: 0;
   background-color: #ffffff;
+ 
 }
 
 .campus-hero {
   margin-top: 80px;
   position: relative;
-  background: linear-gradient(135deg, #4a6edb 0%, #5e6e85 100%);
+  /* background: linear-gradient(135deg, rgba(39, 48, 78, 0.8) 0%, rgba(249, 115, 22, 0.6) 100%); */
+  background-color: #5c5858;
   color: #ffffff;
   text-align: center;
-  padding: 180px 20px 120px; /* Increased height like other banners */
+  padding: 180px 20px 120px; 
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -19,11 +21,13 @@
   min-height: 90vh;
 }
 
-.hero-overlay {
+.skillpage-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
+  background: url("/gif.gif") center center/cover no-repeat;
+  opacity: 0.25; /* semi-transparent overlay */
+  pointer-events: none; /* allow text to be clickable */
 }
 
 .hero-content {

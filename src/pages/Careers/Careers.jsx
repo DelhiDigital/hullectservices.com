@@ -260,10 +260,10 @@ const Careers = () => {
           <h1>
             Welcome to
             <br />
-            <span className="brand-text">CAREERPAGE</span>
+            <span className="brand-text">CAREER PAGE</span>
           </h1>
           <p>
-            CareerPage is your first source for jobs in broadcasting because these jobs are posted by the source –
+            Career Page is your first source for jobs in broadcasting because these jobs are posted by the source –
             broadcasters from across the country. This comprehensive listing of open positions provides you with a wide
             range of career opportunities.
           </p>
