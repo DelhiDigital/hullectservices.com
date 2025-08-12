@@ -81,6 +81,7 @@ const specializations = [
   { area: "Hospitality", icon: "🛎️", expertise: "Hotel Management, Guest Services, F&B" },
   { area: "Education", icon: "🎓", expertise: "Teaching, EdTech, Academic Admin" },
   { area: "Fintech", icon: "📲", expertise: "Payments, Risk, Tech Development" },
+  { area: "Security", icon: "🔒", expertise: "Risk Management, Compliance " }
 ];
 
 const whyChooseUs = [
@@ -114,6 +115,7 @@ const whyChooseUs = [
     description: "Faster time-to-hire without compromising quality",
     icon: "⚡",
   },
+ 
 ];
 
 const SearchRecruitment = () => {

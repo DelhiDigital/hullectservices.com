@@ -450,7 +450,7 @@
   }
 
   .logo img {
-    height: clamp(28px, 6vw, 45px);
+    height: clamp(52px, 6vw, 45px);
   }
 
   /* Hide desktop navigation */

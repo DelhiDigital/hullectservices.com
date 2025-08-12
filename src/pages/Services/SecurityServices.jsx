@@ -147,7 +147,7 @@ const SecurityPage = () => {
               />
             </div>
             <div>
-              <h2 className="heading-secondary mb-lg">Why Choose Hullect?</h2>
+              <h2 className="heading-secondary mb-lg" style={{ textAlign: "left" }}>Why Choose Hullect?</h2>
               <ul className="benefits-list">
                 <li>Free site survey and input from our security expert</li>
                 <li>Tailored quotations to suit your budget requirements</li>

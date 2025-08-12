@@ -11,6 +11,8 @@ const ManagedServices = () => {
     { icon: "✅", label: "Ensure 100% Compliance" },
     { icon: "🧾", label: "Documentation & Audit" },
     { icon: "📈", label: "Procure Results (Revenue)" },
+    { icon: "🗂️", label: "Asset Management" }
+
   ];
 
   return (

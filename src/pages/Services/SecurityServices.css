@@ -403,7 +403,6 @@
   .grid-4-cols {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
-  
 }
 
 @media (max-width: 768px) {
