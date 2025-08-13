@@ -77,7 +77,34 @@ const ManagedServices = () => {
         ))}
       </section>
 
-      
+      <section className="our-approach-section">
+        <div className="our-approach-container">
+          <h2>Our Approach</h2>
+          <div className="approach-cards">
+            <div className="approach-card">
+              <h4>Smart Hiring</h4>
+              <p>
+                We recruit, train, and deploy a dedicated field team tailored to
+                your retail goals.
+              </p>
+            </div>
+            <div className="approach-card">
+              <h4>Tech-First Execution</h4>
+              <p>
+                Custom portals and mobile apps ensure real-time tracking,
+                reporting, and team performance insights.
+              </p>
+            </div>
+            <div className="approach-card">
+              <h4>Seamless Operations</h4>
+              <p>
+                We manage compliance, documentation, audits, and offer direct
+                salary payments to your field force.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Call To Action */}
       <section className="search-cta">
