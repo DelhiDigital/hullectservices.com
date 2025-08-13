@@ -68,9 +68,9 @@ const ManagedServices = () => {
       <section className="managed-services-cards">
         {processSteps.map((step, index) => (
           <div className="managed-service-card" key={index}>
-            <div className="managed-service-icon" style={{ fontSize: "2rem" }}>
+            <span className="managed-service-icon" style={{ fontSize: "2rem" }}>
               {step.icon}
-            </div>
+            </span>
             <h3>{step.label}</h3>
             <p>{step.description}</p>
           </div>
@@ -82,6 +82,7 @@ const ManagedServices = () => {
           <h2>Our Approach</h2>
           <div className="approach-cards">
             <div className="approach-card">
+              <span style={{ fontSize: "2rem" }}>🧑‍💼</span>
               <h4>Smart Hiring</h4>
               <p>
                 We recruit, train, and deploy a dedicated field team tailored to
@@ -89,6 +90,7 @@ const ManagedServices = () => {
               </p>
             </div>
             <div className="approach-card">
+              <span style={{ fontSize: "2rem" }}>📱</span>
               <h4>Tech-First Execution</h4>
               <p>
                 Custom portals and mobile apps ensure real-time tracking,
@@ -96,6 +98,7 @@ const ManagedServices = () => {
               </p>
             </div>
             <div className="approach-card">
+              <span style={{ fontSize: "2rem" }}>✅</span>
               <h4>Seamless Operations</h4>
               <p>
                 We manage compliance, documentation, audits, and offer direct
@@ -105,8 +108,6 @@ const ManagedServices = () => {
           </div>
         </div>
       </section>
-
-      {/* Call To Action */}
       <section className="search-cta">
         <div className="container">
           <h2>Let Us Handle Your Store Operations</h2>
