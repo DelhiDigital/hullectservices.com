@@ -127,9 +127,9 @@ const Partners = () => {
       <section className="page-hero">
         <div className="hero-background">
           <img
-            src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1920&h=600&fit=crop&crop=center"
+            src="./partnerpage.png?w=1920&h=800&fit=crop&crop=center"
             alt="Our Partners"
-            className="hero-bg-image"
+            className="partner-hero-bg-image"
           />
           <div className="hero-overlay"></div>
         </div>
