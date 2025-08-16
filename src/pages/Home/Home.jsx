@@ -117,7 +117,7 @@ const Home = () => {
 
       // Animate each word with realistic timing
       wordSpans.forEach((word, index) => {
-        let delay = index * 0.2 // Base delay between words
+        let delay = index * 0.1 // Base delay between words
 
         // Add longer pauses for important words
         if (word.classList.contains("highlight")) {
