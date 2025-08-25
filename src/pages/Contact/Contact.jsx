@@ -20,19 +20,20 @@ const Contact = () => {
   const [errorMsg, setErrorMsg] = useState("")
 
   // Safe API base detection (works in CRA/Vite/Next or via window var)
-  const API_BASE = (() => {
-    const fromCRA =
-      (typeof process !== "undefined" && process.env && process.env.REACT_APP_API_URL) || null
-    const fromVite =
-      (typeof import.meta !== "undefined" &&
-        import.meta.env &&
-        (import.meta.env.VITE_API_BASE_URL ||
-          import.meta.env.VITE_APP_API_URL ||
-          import.meta.env.VITE_API_URL)) || null
-    const fromWindow =
-      (typeof window !== "undefined" && (window.__API_BASE__ || window.REACT_APP_API_URL)) || null
-    return (fromCRA || fromVite || fromWindow || "http://localhost:5000/api").replace(/\/$/, "")
-  })()
+  // const API_BASE = (() => {
+  //   const fromCRA =
+  //     (typeof process !== "undefined" && process.env && process.env.REACT_APP_API_URL) || null
+  //   const fromVite =
+  //     (typeof import.meta !== "undefined" &&
+  //       import.meta.env &&
+  //       (import.meta.env.VITE_API_BASE_URL ||
+  //         import.meta.env.VITE_APP_API_URL ||
+  //         import.meta.env.VITE_API_URL)) || null
+  //   const fromWindow =
+  //     (typeof window !== "undefined" && (window.__API_BASE__ || window.REACT_APP_API_URL)) || null
+  //   return (fromCRA || fromVite || fromWindow || "http://localhost:5000/api").replace(/\/$/, "")
+  // })()
+
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -62,7 +63,7 @@ const Contact = () => {
 
     setSubmitting(true)
     try {
-      const res = await fetch(`${API_BASE}/contacts`, {
+      const res = await fetch(`https://hullectservices-backend.vercel.app/api/contacts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
