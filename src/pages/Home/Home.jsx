@@ -64,14 +64,14 @@ const Home = () => {
     const tl = gsap.timeline()
 
     // Get the appropriate title text based on screen size
-    let titleText = "Yout trusted partner in Recruitment, Staffing, Managed  Services & HR Services"
+    let titleText = "You trusted partner in Recruitment, Staffing, Managed  Services & HR Services"
 
     if (windowWidth <= 320) {
-      titleText = "Yout trusted partner in Recruitment, Staffing, Managed  Services & HR Services"
+      titleText = "You trusted partner in Recruitment, Staffing, Managed  Services & HR Services"
     } else if (windowWidth <= 480) {
-      titleText = "Yout trusted partner in Recruitment, Staffing, Managed  Services & HR Services"
+      titleText = "You trusted partner in Recruitment, Staffing, Managed  Services & HR Services"
     } else if (windowWidth <= 768) {
-      titleText = "Yout trusted partner in Recruitment, Staffing, Managed  Services & HR Services"
+      titleText = "You trusted partner in Recruitment, Staffing, Managed  Services & HR Services"
     }
 
     // Split text into words instead of characters to prevent word breaking
