@@ -241,7 +241,7 @@ const TrustedPartnerSection = () => {
               {duplicatedPartners.map((partner, index) => (
                 <a
                   key={`row1-${partner.id}-${index}`}
-                  href={partner.url}
+                  // href={partner.url}
                   className="trustedClient_logoWrapper"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -268,7 +268,7 @@ const TrustedPartnerSection = () => {
               {duplicatedPartners2.map((partner2, index) => (
                 <a
                   key={`row2-${partner2.id}-${index}`}
-                  href={partner2.url}
+                  // href={partner2.url}
                   className="trustedClient_logoWrapper"
                   target="_blank"
                   rel="noopener noreferrer"
