@@ -167,6 +167,13 @@ const Contact = () => {
       phone: "+91-9120018844",
       email: "connect@hullectservices.com",
       image: "/Rajasthan.png"
+    },
+    {
+      city: "Mumbai",
+      address: "Om Plaza Co-op Society Ltd., Office no. 3B, Ground Floor, V. L. Road, Near Mc Donald's, Kandivali (W) Mumbai - 400067",
+      phone: "+91-9120018844",
+      email: "connect@hullectservices.com",
+      image: "/Mumbai.jpeg"
     }
   ]
 
