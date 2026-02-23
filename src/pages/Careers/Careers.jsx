@@ -58,7 +58,7 @@ const Careers = () => {
     </div>
   )
 }
-
+//career page 
 export default Careers
 
 
