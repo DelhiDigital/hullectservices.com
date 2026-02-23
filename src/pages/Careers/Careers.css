@@ -4,52 +4,233 @@
   min-height: 100vh;
   position: relative;
   padding-top: 120px;
+  background: #f0f0f0;
 }
 
-/* Full screen loader overlay */
-.ceipal-loader-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.ceipal-loader-spinner {
-  width: 56px;
-  height: 56px;
-  border: 5px solid #e5e7eb;
-  border-top: 5px solid #2563eb;
-  border-radius: 50%;
-  animation: ceipal-spin 0.8s linear infinite;
-  margin-bottom: 20px;
-}
-
-.ceipal-loader-overlay p {
-  font-size: 1.1rem;
-  color: #6b7280;
-  font-family: var(--font-primary), sans-serif;
-}
-
-@keyframes ceipal-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Widget container takes full width */
 #example-widget-container {
   width: 100%;
   min-height: 100vh;
+}
+
+/* ======== Skeleton (matches CEIPAL widget layout) ======== */
+
+/* Shimmer animation */
+.shimmer {
+  background: linear-gradient(90deg, #e0e0e0 25%, #ececec 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Skeleton wrapper - matches CEIPAL widget width */
+.sk {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Dark search banner */
+.sk-banner {
+  background: #1a1a2e;
+  padding: 30px 20px;
+}
+
+.sk-banner-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sk-search-box {
+  flex: 1;
+  height: 44px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.sk-search-btn {
+  width: 130px;
+  height: 44px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Body layout */
+.sk-content {
+  display: flex;
+  gap: 0;
+  max-width: 100%;
+  padding: 20px;
+}
+
+/* Sidebar - matches CEIPAL dark blue sidebar */
+.sk-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  background: #1b4f72;
+  border-radius: 6px;
+  padding: 24px 20px;
+  margin-right: 20px;
+}
+
+.sk-sidebar-title {
+  height: 24px;
+  width: 70px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sk-filter-group {
+  margin-bottom: 20px;
+}
+
+.sk-filter-label {
+  height: 14px;
+  width: 90px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.sk-filter-dropdown {
+  height: 38px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.sk-filter-input {
+  height: 38px;
+  width: 100%;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Jobs area */
+.sk-jobs {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Mobile resume card - hidden on desktop */
+.sk-resume-card-mobile {
+  display: none;
+}
+
+.sk-jobs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sk-openings {
+  height: 22px;
+  width: 180px;
+}
+
+.sk-pagination {
+  height: 30px;
+  width: 80px;
+  border-radius: 4px;
+}
+
+/* Job card skeleton - matches gray lines in CEIPAL */
+.sk-job-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 14px;
+}
+
+.sk-job-line {
+  height: 12px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.sk-job-line:last-child {
+  margin-bottom: 0;
+}
+
+.sk-job-line.w100 { width: 100%; }
+.sk-job-line.w80 { width: 80%; }
+.sk-job-line.w70 { width: 70%; }
+.sk-job-line.w60 { width: 60%; }
+.sk-job-line.w40 { width: 40%; }
+
+.sk-job-divider {
+  height: 1px;
+  background: #e8e8e8;
+  margin: 14px 0;
+}
+
+/* ======== Mobile Layout ======== */
+@media (max-width: 768px) {
+  .ceipal-careers-page {
+    padding-top: 80px;
+  }
+
+  .sk-banner-inner {
+    flex-direction: column;
+  }
+
+  .sk-search-box {
+    width: 100%;
+  }
+
+  .sk-search-btn {
+    width: 100%;
+  }
+
+  .sk-content {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  /* Hide sidebar on mobile, show collapsed filter */
+  .sk-sidebar {
+    display: none;
+  }
+
+  /* Show resume card on mobile */
+  .sk-resume-card-mobile {
+    display: block;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .sk-resume-line {
+    height: 14px;
+    width: 80%;
+    margin: 0 auto 10px;
+  }
+
+  .sk-resume-line.short {
+    width: 60%;
+  }
+
+  .sk-resume-btn {
+    height: 38px;
+    width: 140px;
+    margin: 16px auto 0;
+    border-radius: 20px;
+  }
+
+  .sk-job-card {
+    padding: 16px;
+  }
 }
 
 
@@ -58,34 +239,4 @@
  * PREVIOUS CAREER PAGE CSS (COMMENTED OUT)
  * Commented out on 2026-02-19 to integrate CEIPAL widget
  * =====================================================
- *
- * body { font-family: var(--font-primary); line-height: 1.6; color: #333; margin: 0; padding: 0; }
- * .careers-container { min-height: 100vh; background-color: #f9fafb; }
- * .loading-container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh; text-align: center; margin-top: 20px; }
- * .loading-spinner { width: 48px; height: 48px; border: 4px solid #e5e7eb; border-top: 4px solid #2563eb; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px; }
- * .banner-section { background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #7c3aed 100%); color: white; padding: 80px 20px; position: relative; overflow: hidden; margin-top: 40px; }
- * .banner-content { max-width: 1200px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
- * .banner-content h1 { font-size: 3.5rem; font-weight: bold; margin-bottom: 30px; line-height: 1.2; }
- * .brand-text { background: linear-gradient(135deg, #bfdbfe 0%, #ddd6fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
- * .search-section { background: white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-top: -32px; position: relative; z-index: 10; }
- * .search-container { max-width: 1200px; margin: 0 auto; padding: 32px 20px; }
- * .search-form { background: white; border-radius: 12px; padding: 32px; }
- * .search-row { display: flex; gap: 20px; align-items: end; flex-wrap: wrap; }
- * .input-group { flex: 1; min-width: 250px; }
- * .search-input { width: 100%; height: 48px; padding: 0 40px; font-size: 16px; border: 2px solid #e5e7eb; border-radius: 8px; }
- * .search-button { height: 48px; padding: 0 32px; background: #ef4444; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; }
- * .jobs-section { padding: 48px 20px; max-width: 1200px; margin: 0 auto; }
- * .jobs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
- * .job-card { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 24px; cursor: pointer; transition: all 0.3s ease; }
- * .job-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.15); transform: translateY(-2px); border-color: #3b82f6; }
- * .job-title { font-size: 1.25rem; font-weight: bold; color: #2563eb; margin-bottom: 8px; }
- * .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 1000; padding: 20px; }
- * .modal-content { background: white; border-radius: 12px; max-width: 800px; width: 100%; max-height: 90vh; overflow-y: auto; }
- * .apply-button { background: #2563eb; color: white; padding: 12px 32px; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; }
- * .application-form { max-width: 100%; }
- * .form-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 20px; }
- * .form-group { margin-bottom: 20px; }
- * .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 6px; font-size: 1rem; box-sizing: border-box; }
- * .submit-button { background: #2563eb; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; }
- * ... and all responsive media queries ...
  */

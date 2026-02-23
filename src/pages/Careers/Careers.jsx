@@ -14,18 +14,22 @@ const Careers = () => {
     script.setAttribute("data-ceipal-career-portal-id", "Z3RkUkt2OXZJVld2MjFpOVRSTXoxZz09")
     script.async = true
 
-    script.onerror = () => {
-      setLoading(false)
-    }
+    script.onerror = () => setLoading(false)
 
     if (widgetContainerRef.current) {
       widgetContainerRef.current.parentNode.insertBefore(script, widgetContainerRef.current)
     }
 
-    // Watch for widget content to appear inside the container
+    // Watch for iframe to fully load inside the widget container
     const observer = new MutationObserver(() => {
-      if (widgetContainerRef.current && widgetContainerRef.current.children.length > 0) {
-        setLoading(false)
+      if (!widgetContainerRef.current) return
+      const iframe = widgetContainerRef.current.querySelector("iframe")
+      if (iframe) {
+        iframe.addEventListener("load", () => setLoading(false))
+        // Fallback if load event already fired
+        if (iframe.contentDocument && iframe.contentDocument.readyState === "complete") {
+          setLoading(false)
+        }
         observer.disconnect()
       }
     })
@@ -34,8 +38,8 @@ const Careers = () => {
       observer.observe(widgetContainerRef.current, { childList: true, subtree: true })
     }
 
-    // Fallback: hide loader after 5s max even if widget hasn't rendered
-    const fallbackTimer = setTimeout(() => setLoading(false), 5000)
+    // Fallback: hide skeleton after 15s max
+    const fallbackTimer = setTimeout(() => setLoading(false), 15000)
 
     return () => {
       observer.disconnect()
@@ -49,16 +53,81 @@ const Careers = () => {
   return (
     <div className="ceipal-careers-page">
       {loading && (
-        <div className="ceipal-loader-overlay">
-          <div className="ceipal-loader-spinner"></div>
-          <p>Loading career portal...</p>
+        <div className="sk">
+          {/* Search Banner */}
+          <div className="sk-banner">
+            <div className="sk-banner-inner">
+              <div className="sk-search-box shimmer"></div>
+              <div className="sk-search-btn shimmer"></div>
+            </div>
+          </div>
+
+          {/* Body: Sidebar + Jobs */}
+          <div className="sk-content">
+            {/* Sidebar Filters - Desktop only */}
+            <div className="sk-sidebar">
+              <div className="sk-sidebar-title shimmer"></div>
+
+              <div className="sk-filter-group">
+                <div className="sk-filter-label shimmer"></div>
+                <div className="sk-filter-dropdown shimmer"></div>
+              </div>
+              <div className="sk-filter-group">
+                <div className="sk-filter-label shimmer"></div>
+                <div className="sk-filter-dropdown shimmer"></div>
+              </div>
+              <div className="sk-filter-group">
+                <div className="sk-filter-label shimmer"></div>
+                <div className="sk-filter-dropdown shimmer"></div>
+              </div>
+              <div className="sk-filter-group">
+                <div className="sk-filter-label shimmer"></div>
+                <div className="sk-filter-dropdown shimmer"></div>
+                <div className="sk-filter-dropdown shimmer"></div>
+                <div className="sk-filter-input shimmer"></div>
+              </div>
+            </div>
+
+            {/* Jobs Area */}
+            <div className="sk-jobs">
+              {/* Mobile: Submit Resume card */}
+              <div className="sk-resume-card-mobile">
+                <div className="sk-resume-line shimmer"></div>
+                <div className="sk-resume-line short shimmer"></div>
+                <div className="sk-resume-btn shimmer"></div>
+              </div>
+
+              <div className="sk-jobs-header">
+                <div className="sk-openings shimmer"></div>
+                <div className="sk-pagination shimmer"></div>
+              </div>
+
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="sk-job-card">
+                  <div className="sk-job-line w60 shimmer"></div>
+                  <div className="sk-job-line w40 shimmer"></div>
+                  <div className="sk-job-line w70 shimmer"></div>
+                  <div className="sk-job-divider"></div>
+                  <div className="sk-job-line w100 shimmer"></div>
+                  <div className="sk-job-line w100 shimmer"></div>
+                  <div className="sk-job-line w80 shimmer"></div>
+                  <div className="sk-job-line w100 shimmer"></div>
+                  <div className="sk-job-line w60 shimmer"></div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       )}
-      <div id="example-widget-container" ref={widgetContainerRef}></div>
+      <div
+        id="example-widget-container"
+        ref={widgetContainerRef}
+        style={{ display: loading ? "none" : "block" }}
+      ></div>
     </div>
   )
 }
-//career page 
+//career page
 export default Careers
 
 
@@ -98,38 +167,7 @@ export default Careers
  *   const [jobs, setJobs] = useState([])
  *   const [filteredJobs, setFilteredJobs] = useState([])
  *   const [loading, setLoading] = useState(true)
- *   const [searchKeywords, setSearchKeywords] = useState("")
- *   const [searchLocation, setSearchLocation] = useState("")
- *   const [showLocationSuggestions, setShowLocationSuggestions] = useState(false)
- *   const [locationSuggestions, setLocationSuggestions] = useState([])
- *   const [selectedJob, setSelectedJob] = useState(null)
- *   const [showJobModal, setShowJobModal] = useState(false)
- *   const [showApplyModal, setShowApplyModal] = useState(false)
- *   const [submitting, setSubmitting] = useState(false)
- *   const locationInputRef = useRef(null)
- *   const [cities, setCities] = useState(initialCities)
- *
- *   const [applicationData, setApplicationData] = useState({
- *     firstName: "", lastName: "", email: "", phone: "",
- *     address: "", city: "", state: "", zipCode: "",
- *     coverLetter: "", resume: null,
- *   })
- *
- *   useEffect(() => { loadJobs() }, [])
- *
- *   const loadJobs = async () => { ... }
- *   const handleLocationChange = (value) => { ... }
- *   const handleSearch = async () => { ... }
- *   const selectLocationSuggestion = (city) => { ... }
- *   const openJobModal = (job) => { ... }
- *   const closeJobModal = () => { ... }
- *   const openApplyModal = () => { ... }
- *   const closeApplyModal = () => { ... }
- *   const handleInputChange = (e) => { ... }
- *   const handleFileChange = (e) => { ... }
- *   const handleSubmitApplication = async (e) => { ... }
- *
- *   return ( ... hero, search, job cards, modals, application form ... )
+ *   ... (rest of old component code)
  * }
  *
  * export default Careers
