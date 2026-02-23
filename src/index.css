@@ -81,17 +81,16 @@ html {
   scroll-behavior: smooth;
 }
 
-/* body {
+body {
   font-family: var(--font-primary);
   font-size: var(--text-base);
   line-height: 1.6;
   color: var(--gray-800);
-  background-color: var(--rgb(48, 77, 84));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-} */
+}
 
 /* Typography Classes */
 .heading-primary {
