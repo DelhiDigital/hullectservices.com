@@ -174,7 +174,16 @@ const Contact = () => {
       address: "Om Plaza Co-op Society Ltd., Office no. 3B, Ground Floor, V. L. Road, Near Mc Donald's, Kandivali (W) Mumbai - 400067",
       phone: "+91-9120018844",
       email: "connect@hullectservices.com",
-      image: "/Mumbai.jpeg"
+      image: "/Mumbai.jpeg",
+      mapUrl: "https://maps.app.goo.gl/UKPbU7YXDkvbuaNeA?g_st=iw"
+    },
+    {
+      city: "Mumbai (Borivali East)",
+      address: "Western Edge II, B-10A, behind Metro Supermarket, off Western Express Highway, Magathane, Borivali East, Mumbai, Maharashtra 400066",
+      phone: "+91-9120018844",
+      email: "connect@hullectservices.com",
+      image: "/Mumbai.jpeg",
+      mapUrl: "https://maps.app.goo.gl/UKPbU7YXDkvbuaNeA?g_st=iw"
     }
   ]
 

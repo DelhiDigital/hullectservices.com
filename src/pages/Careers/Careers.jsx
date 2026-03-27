@@ -6,30 +6,52 @@ const Careers = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Load CEIPAL career portal widget script
-    const script = document.createElement("script")
-    script.type = "text/javascript"
-    script.src = "https://jobsapi.ceipal.com/APISource/widget.js"
-    script.setAttribute("data-ceipal-api-key", "R3pHTSt0cUM2ZXBLelVWRDFYb3pqUT09")
-    script.setAttribute("data-ceipal-career-portal-id", "Z3RkUkt2OXZJVld2MjFpOVRSTXoxZz09")
-    script.async = true
-
-    script.onerror = () => setLoading(false)
-
-    if (widgetContainerRef.current) {
-      widgetContainerRef.current.parentNode.insertBefore(script, widgetContainerRef.current)
+    // Step 1: Pre-load jQuery 1.4.2 so widget.js finds it already present
+    // and skips downloading it (saves ~1 network request)
+    const loadJQuery = () => {
+      return new Promise((resolve) => {
+        if (window.jQuery && window.jQuery.fn.jquery === "1.4.2") {
+          resolve() // Already loaded
+          return
+        }
+        const jq = document.createElement("script")
+        jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+        jq.onload = resolve
+        jq.onerror = resolve // Continue even if fails, widget will retry
+        document.head.appendChild(jq)
+      })
     }
 
-    // Watch for iframe to fully load inside the widget container
+    // Step 2: Load CEIPAL widget script after jQuery is ready
+    const loadWidget = () => {
+      const script = document.createElement("script")
+      script.type = "text/javascript"
+      script.src = "https://jobsapi.ceipal.com/APISource/widget.js"
+      script.setAttribute("data-ceipal-api-key", "R3pHTSt0cUM2ZXBLelVWRDFYb3pqUT09")
+      script.setAttribute("data-ceipal-career-portal-id", "Z3RkUkt2OXZJVld2MjFpOVRSTXoxZz09")
+      script.async = true
+      script.onerror = () => setLoading(false)
+
+      if (widgetContainerRef.current) {
+        widgetContainerRef.current.parentNode.insertBefore(script, widgetContainerRef.current)
+      }
+      return script
+    }
+
+    let scriptRef = null
+    loadJQuery().then(() => {
+      scriptRef = loadWidget()
+    })
+
+    // Widget flow: script → loads jQuery 1.4.2 → AJAX to api.ceipal.com →
+    // injects HTML with iframe#careers_api_source into #example-widget-container
+    // Watch for that iframe, then wait for it to fully load
     const observer = new MutationObserver(() => {
       if (!widgetContainerRef.current) return
-      const iframe = widgetContainerRef.current.querySelector("iframe")
+      const iframe = widgetContainerRef.current.querySelector("#careers_api_source")
       if (iframe) {
+        // iframe found — listen for it to fully load
         iframe.addEventListener("load", () => setLoading(false))
-        // Fallback if load event already fired
-        if (iframe.contentDocument && iframe.contentDocument.readyState === "complete") {
-          setLoading(false)
-        }
         observer.disconnect()
       }
     })
@@ -38,14 +60,14 @@ const Careers = () => {
       observer.observe(widgetContainerRef.current, { childList: true, subtree: true })
     }
 
-    // Fallback: hide skeleton after 15s max
-    const fallbackTimer = setTimeout(() => setLoading(false), 15000)
+    // Fallback: hide skeleton after 20s max
+    const fallbackTimer = setTimeout(() => setLoading(false), 20000)
 
     return () => {
       observer.disconnect()
       clearTimeout(fallbackTimer)
-      if (script.parentNode) {
-        script.parentNode.removeChild(script)
+      if (scriptRef && scriptRef.parentNode) {
+        scriptRef.parentNode.removeChild(scriptRef)
       }
     }
   }, [])
