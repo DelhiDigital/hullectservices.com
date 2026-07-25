@@ -4,11 +4,23 @@ import "./Media.css"
 const Media = () => {
   const foundationDayHighlights = [
     {
+      title: "Foundation Day Celebration 2026",
+      excerpt:
+        "Hullect Services proudly marked its 5th Anniversary — a milestone celebration honoring five years of trusted service, nationwide growth, and the dedication of our people, clients, and partners who made this journey possible.",
+      date: "20 July 2026",
+      category: "Foundation Day",
+      badge: "🎂 Foundation Day 2026",
+      image: "/5th-year-aniversary.jpeg",
+      // readTime: "5 min read",
+      // featured: true,
+    },
+    {
       title: "Foundation Day Celebration 2025",
       excerpt:
         "Hullect Services celebrated its Foundation Day with great enthusiasm, bringing together the entire team for a memorable celebration filled with achievements, recognition, and team bonding activities.",
-      date: "jun 11, 2025",
+      date: "11 June 2025",
       category: "Foundation Day",
+      badge: "🎂 Foundation Day 2025",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250612-WA0015.jpg-dX3SQfQrzfo1m6fs2fI4WavWzP5Ywo.jpeg",
       // readTime: "5 min read",
@@ -173,6 +185,12 @@ const Media = () => {
 
   const achievements = [
     {
+      year: "2026",
+      title: "Foundation Day Celebration - 5 Years of Excellence",
+      description:
+        "Marked a milestone 5th Anniversary, celebrating five years of trusted service, nationwide growth, and lasting partnerships with our clients and team",
+    },
+    {
       year: "2025",
       title: "Foundation Day Celebration - 4 Years of Excellence",
       description:
@@ -230,9 +248,9 @@ const Media = () => {
         <div className="container">
           <div className="section-header text-center">
             <span className="section-tag foundation-tag">🎉 Foundation Day Special</span>
-            <h2 className="heading-secondary">Celebrating 4 Years of Excellence</h2>
+            <h2 className="heading-secondary">Celebrating 5 Years of Excellence</h2>
             <p className="text-large">
-              Join us as we celebrate our Foundation Day 2025 with team achievements, recognition, and memorable moments
+              Join us as we celebrate our Foundation Day 2026 with team achievements, recognition, and memorable moments
             </p>
           </div>
 
@@ -242,7 +260,7 @@ const Media = () => {
                 <div className="foundation-image">
                   <img src={article.image || "/placeholder.svg"} alt={article.title} />
                   <div className="foundation-badge">
-                    <span>🎂 Foundation Day 2025</span>
+                    <span>{article.badge || "🎂 Foundation Day"}</span>
                   </div>
                 </div>
                 <div className="foundation-content">

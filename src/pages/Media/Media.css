@@ -95,29 +95,50 @@
 .foundation-day-content {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
 }
 
 .foundation-day-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-3xl);
-  align-items: center;
+  gap: 0;
+  align-items: stretch;
   background: var(--white);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-lg);
   overflow: hidden;
   border: 1px solid var(--gray-200);
-  transition: all var(--transition-normal);
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+/* Accent bar along the top of each card */
+.foundation-day-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(135deg, var(--secondary-orange) 0%, var(--primary-blue) 100%);
+  z-index: 3;
 }
 
 .foundation-day-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.25);
+}
+
+/* Alternate the image side for even cards */
+.foundation-day-card:nth-child(even) .foundation-image {
+  order: 2;
 }
 
 .foundation-image {
   position: relative;
-  height: 400px;
+  min-height: 400px;
   overflow: hidden;
 }
 
@@ -125,7 +146,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  margin-left: 20px;
   transition: transform var(--transition-normal);
 }
 
@@ -137,26 +157,44 @@
   position: absolute;
   top: var(--spacing-lg);
   left: var(--spacing-lg);
-  background: linear-gradient(135deg, var(--secondary-orange) 0%, var(--primary-blue) 100%);
-  color: var(--white);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary-blue);
   padding: var(--spacing-sm) var(--spacing-lg);
-  border-radius: var(--radius-lg);
+  border-radius: 100px;
   font-size: var(--text-sm);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(6px);
   box-shadow: var(--shadow-md);
+  z-index: 3;
 }
 
 .foundation-content {
   padding: var(--spacing-3xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .foundation-meta {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
   font-size: var(--text-sm);
   color: var(--gray-500);
+}
+
+.foundation-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: var(--gray-50);
+  border-radius: 100px;
+  font-weight: 600;
+  color: var(--primary-blue);
 }
 
 .foundation-title {
@@ -184,22 +222,40 @@
 .highlight-item {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-md);
-  background: var(--gray-50);
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius-lg);
-  border-left: 4px solid var(--primary-blue);
-  transition: all var(--transition-fast);
+  font-weight: 600;
+  color: var(--gray-700);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .highlight-item:hover {
-  background: var(--primary-blue);
-  color: var(--white);
-  transform: translateX(5px);
+  transform: translateY(-3px);
+  border-color: var(--primary-blue);
+  box-shadow: 0 10px 20px -8px rgba(37, 99, 235, 0.35);
+  color: var(--gray-900);
 }
 
 .highlight-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
   font-size: var(--text-lg);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.12) 0%, rgba(37, 99, 235, 0.12) 100%);
+  border-radius: 50%;
+  transition: transform var(--transition-fast);
+}
+
+.highlight-item:hover .highlight-icon {
+  transform: scale(1.1) rotate(-6deg);
 }
 
 /* Foundation Day Gallery */
@@ -578,6 +634,11 @@
   .foundation-day-card {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  /* Keep image on top for every card when stacked */
+  .foundation-day-card:nth-child(even) .foundation-image {
+    order: 0;
   }
 
   .foundation-content {

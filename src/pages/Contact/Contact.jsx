@@ -124,7 +124,7 @@ const Contact = () => {
       ]
     },
     { icon: "📞", title: "Phone Numbers", details: ["+91-9120018844"] },
-    { icon: "📧", title: "Email Addresses", details: ["connect@hullectservices.com", "corphr@hullectservices.com"] }
+    { icon: "📧", title: "Email Addresses", details: ["connect@hullectservices.com"] }
   ]
 
   //comment
@@ -148,6 +148,22 @@ const Contact = () => {
       mapUrl: "https://maps.app.goo.gl/As3zPUDmgnPUg5U99"
     },
     {
+      city: "Noida",
+      address:
+        "Metro Station, D-9, Second Floor, Near Sector 16, Noida Sector 3, Noida, Uttar Pradesh – 201301",
+      phone: "+91-9120018844",
+      email: "connect@hullectservices.com",
+      image: "/noida-sec16.jpeg"
+    },
+    {
+      city: "Hyderabad",
+      address:
+        "3rd & 4th Floor, Plot No. 20, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana – 500081",
+      phone: "+91-9120018844",
+      email: "connect@hullectservices.com",
+      image: "/hyderabad.jpg"
+    },
+    {
       city: "Varanasi",
       address: "C/O Churamanpur,Near Bank of BarodaRegional Office , Chandpur,Varanasi 221106",
       phone: "+91-9120018844",
@@ -163,7 +179,7 @@ const Contact = () => {
       image: "/bangalore.png"
     },
     {
-      city: "Rajasthan",
+      city: "Jaipur",
       address: "G-205 ,RIICO Industrial area Bagru,Ajmer Road,Jaipur -303007",
       phone: "+91-9120018844",
       email: "connect@hullectservices.com",

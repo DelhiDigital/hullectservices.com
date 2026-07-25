@@ -72,7 +72,19 @@ const TrustedPartnerSection = () => {
       logo: "./Gyan.png?height=60&width=120",
       url: "https://example.com/8",
     },
-  
+    {
+      id: 11,
+      name: "Avadh Rail Infra Ltd.",
+      logo: "./avadh-rail.jpg?height=60&width=120",
+      url: "https://example.com/11",
+    },
+    {
+      id: 12,
+      name: "Dalmia Bharat Group",
+      logo: "./dalmia-bharat.jpeg?height=60&width=120",
+      url: "https://example.com/12",
+    },
+
   ]
 
   //row 2 partners data
@@ -136,6 +148,18 @@ const TrustedPartnerSection = () => {
       name: "Company Ten",
       logo: "./jiodigital.png?height=80&width=140",
       url: "https://example.com/8",
+    },
+    {
+      id: 11,
+      name: "Parlé Agro",
+      logo: "./parle-agro.png?height=60&width=120",
+      url: "https://example.com/11",
+    },
+    {
+      id: 12,
+      name: "Tender Palm Super Speciality Hospital",
+      logo: "./tender-palm.png?height=60&width=120",
+      url: "https://example.com/12",
     },
 
   ]
