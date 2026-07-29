@@ -58,7 +58,7 @@ const CompanyProfile = () => {
 
   const statistics = [
     {
-      number: "4+",
+      number: "5+",
       label: "Years of Excellence",
       icon: "📅",
     },
@@ -73,7 +73,7 @@ const CompanyProfile = () => {
       icon: "🤝",
     },
     {
-      number: "5+",
+      number: "8+",
       label: "Office Locations",
       icon: "🏢",
     },
@@ -135,7 +135,7 @@ const CompanyProfile = () => {
             <p className="cp-page-subtitle">Building Excellence Since 2021</p>
             <div className="cp-hero-stats">
               <div className="cp-hero-stat">
-                <span className="cp-stat-number">4+</span>
+                <span className="cp-stat-number">5+</span>
                 <span className="cp-stat-label">Years</span>
               </div>
               <div className="cp-hero-stat">

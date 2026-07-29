@@ -149,6 +149,77 @@
   transition: transform var(--transition-normal);
 }
 
+.foundation-carousel-button {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  background: rgba(17, 24, 39, 0.58);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 34px;
+  line-height: 1;
+  transform: translateY(-50%);
+  transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+  backdrop-filter: blur(8px);
+}
+
+.foundation-carousel-previous {
+  left: var(--spacing-lg);
+}
+
+.foundation-carousel-next {
+  right: var(--spacing-lg);
+}
+
+.foundation-carousel-button:hover,
+.foundation-carousel-button:focus-visible {
+  background: var(--secondary-orange);
+  color: var(--white);
+  border-color: var(--secondary-orange);
+  outline: none;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.foundation-carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: var(--spacing-lg);
+  z-index: 4;
+  display: flex;
+  gap: 6px;
+  padding: 7px 9px;
+  border-radius: 100px;
+  background: rgba(17, 24, 39, 0.55);
+  backdrop-filter: blur(8px);
+  transform: translateX(-50%);
+}
+
+.foundation-carousel-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.foundation-carousel-dot.is-active {
+  background: var(--secondary-orange);
+  transform: scale(1.35);
+}
+
+.foundation-carousel-dot:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
+}
+
 .foundation-day-card:hover .foundation-image img {
   transform: scale(1.05);
 }

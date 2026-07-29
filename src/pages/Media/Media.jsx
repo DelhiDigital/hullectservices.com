@@ -1,7 +1,30 @@
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import "./Media.css"
 
+const foundationDay2026Photos = [
+  { src: "/media/foundation-day-2026/team-celebration.jpg", alt: "Hullect Services team at the Foundation Day 2026 celebration" },
+  { src: "/media/foundation-day-2026/welcome-address.jpg", alt: "Foundation Day welcome address" },
+  { src: "/media/foundation-day-2026/audience-one.jpg", alt: "Guests attending the Foundation Day celebration" },
+  { src: "/media/foundation-day-2026/dance-duo.jpg", alt: "Team members performing at Foundation Day" },
+  { src: "/media/foundation-day-2026/event-address.jpg", alt: "Foundation Day event address" },
+  { src: "/media/foundation-day-2026/cake-cutting.jpg", alt: "Hullect Services Foundation Day cake cutting" },
+  { src: "/media/foundation-day-2026/audience-two.jpg", alt: "Foundation Day audience" },
+  { src: "/media/foundation-day-2026/group-performance.jpg", alt: "Team performance at Foundation Day" },
+  { src: "/media/foundation-day-2026/team-portrait.jpg", alt: "Hullect Services team portrait" },
+]
+
 const Media = () => {
+  const [activeFoundationPhoto, setActiveFoundationPhoto] = useState(0)
+
+  useEffect(() => {
+    const carouselTimer = window.setInterval(() => {
+      setActiveFoundationPhoto((current) => (current + 1) % foundationDay2026Photos.length)
+    }, 4000)
+
+    return () => window.clearInterval(carouselTimer)
+  }, [])
+
   const foundationDayHighlights = [
     {
       title: "Foundation Day Celebration 2026",
@@ -10,7 +33,8 @@ const Media = () => {
       date: "20 July 2026",
       category: "Foundation Day",
       badge: "🎂 Foundation Day 2026",
-      image: "/5th-year-aniversary.jpeg",
+      image: foundationDay2026Photos[0].src,
+      gallery: foundationDay2026Photos,
       // readTime: "5 min read",
       // featured: true,
     },
@@ -27,6 +51,16 @@ const Media = () => {
       // featured: true,
     },
   ]
+
+  const showPreviousFoundationPhoto = () => {
+    setActiveFoundationPhoto((current) =>
+      current === 0 ? foundationDay2026Photos.length - 1 : current - 1,
+    )
+  }
+
+  const showNextFoundationPhoto = () => {
+    setActiveFoundationPhoto((current) => (current + 1) % foundationDay2026Photos.length)
+  }
 
   const newsArticles = [
     {
@@ -258,7 +292,45 @@ const Media = () => {
             {foundationDayHighlights.map((article, index) => (
               <article key={index} className="foundation-day-card">
                 <div className="foundation-image">
-                  <img src={article.image || "/placeholder.svg"} alt={article.title} />
+                  {article.gallery ? (
+                    <>
+                      <img
+                        src={article.gallery[activeFoundationPhoto].src}
+                        alt={article.gallery[activeFoundationPhoto].alt}
+                      />
+                      <button
+                        type="button"
+                        className="foundation-carousel-button foundation-carousel-previous"
+                        onClick={showPreviousFoundationPhoto}
+                        aria-label="Show previous Foundation Day photo"
+                      >
+                        ‹
+                      </button>
+                      <button
+                        type="button"
+                        className="foundation-carousel-button foundation-carousel-next"
+                        onClick={showNextFoundationPhoto}
+                        aria-label="Show next Foundation Day photo"
+                      >
+                        ›
+                      </button>
+                      <div className="foundation-carousel-dots" role="tablist" aria-label="Foundation Day photos">
+                        {article.gallery.map((photo, photoIndex) => (
+                          <button
+                            key={photo.src}
+                            type="button"
+                            className={`foundation-carousel-dot ${photoIndex === activeFoundationPhoto ? "is-active" : ""}`}
+                            onClick={() => setActiveFoundationPhoto(photoIndex)}
+                            aria-label={`Show photo ${photoIndex + 1}`}
+                            aria-selected={photoIndex === activeFoundationPhoto}
+                            role="tab"
+                          />
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <img src={article.image || "/placeholder.svg"} alt={article.title} />
+                  )}
                   <div className="foundation-badge">
                     <span>{article.badge || "🎂 Foundation Day"}</span>
                   </div>

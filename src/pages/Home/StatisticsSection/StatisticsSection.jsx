@@ -13,7 +13,7 @@ const StatisticsSection = () => {
   const [statsAnimated, setStatsAnimated] = useState(false)
 
   const stats = [
-    { number: "4+", label: "Years Experience" },
+    { number: "5+", label: "Years Experience" },
     { number: "100+", label: "Companies Served" },
     { number: "10K+", label: "Placements Made" },
     { number: "95%", label: "Client Satisfaction" },
