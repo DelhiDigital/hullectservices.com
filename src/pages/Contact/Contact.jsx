@@ -141,7 +141,7 @@ const Contact = () => {
     {
       city: "Delhi",
       address:
-        "B1 / E13, NH-19, near Mohan Estate, Block E, Mohan Cooperative Ind, Area, New Delhi, Delhi 110044",
+        "C/O – The Office Pass, B-1/E-13, First Floor, Mohan Cooperative, Mathura Road, Near Mohan Estate Metro Station, South Delhi, New Delhi – 110044",
       phone: "+91-9120018844",
       email: "connect@hullectservices.com",
       image: "/Delhi.png",
@@ -150,7 +150,7 @@ const Contact = () => {
     {
       city: "Noida",
       address:
-        "Metro Station, D-9, Second Floor, Near Sector 16, Noida Sector 3, Noida, Uttar Pradesh – 201301",
+        "C/O – The Office Pass, D-9, Second Floor, Sector 3, Noida, Uttar Pradesh – 201301",
       phone: "+91-9120018844",
       email: "connect@hullectservices.com",
       image: "/noida-sec16.jpeg"
@@ -158,7 +158,7 @@ const Contact = () => {
     {
       city: "Hyderabad",
       address:
-        "3rd & 4th Floor, Plot No. 20, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana – 500081",
+        "C/O – Quickstart, 3rd & 4th Floor, Plot No. 20, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana – 500081",
       phone: "+91-9120018844",
       email: "connect@hullectservices.com",
       image: "/hyderabad.jpg"
@@ -187,7 +187,7 @@ const Contact = () => {
     },
     {
       city: "Mumbai (Borivali East)",
-      address: "Western Edge II, B-10A, behind Metro Supermarket, off Western Express Highway, Magathane, Borivali East, Mumbai, Maharashtra 400066",
+      address: "C/O – Bloom Desk, Western Edge II, B-10A, Behind Metro Supermarket, Off Western Express Highway, Magathane, Borivali East, Mumbai, Maharashtra – 400066",
       phone: "+91-9120018844",
       email: "connect@hullectservices.com",
       image: "/Mumbai.jpeg",
